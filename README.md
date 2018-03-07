@@ -13,6 +13,6 @@ http://i.prntscr.com/eQB6kD28T2y5JD40eYolLA.png
 http://i.prntscr.com/4CoNHW88Q3mXVL-5LGfqVQ.png
 
 Results:
-Resistance grows when potential energy of the scattering point grows.
-Resistance becomes less when energy of the moving electron grows.
-Localized states appears, as there is strict dependency between resistance and length between atoms.
+- Resistance grows when potential energy of the scattering point grows.
+- Resistance becomes less when energy of the moving electron grows.
+- Localized states appears, as there is strict dependency between resistance and length between atoms.
