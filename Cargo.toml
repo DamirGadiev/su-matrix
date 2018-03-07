@@ -1,0 +1,9 @@
+[package]
+name = "su-matrix"
+version = "0.1.0"
+authors = ["Damir Gadiev <damir.gadiev@gmail.com>"]
+
+[dependencies]
+num-traits = "0.2.1"
+num-complex = "0.1"
+nalgebra = "0.14.0"
