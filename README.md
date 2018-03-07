@@ -16,3 +16,15 @@ Results:
 - Resistance grows when potential energy of the scattering point grows.
 - Resistance becomes less when energy of the moving electron grows.
 - Localized states appears, as there is strict dependency between resistance and length between atoms.
+
+Most urgent TODO:
+- Add ability to run with arguments and write results to the file.
+- Rename repo and the module.
+- Split functionality to modules
+- Create struct abstractions to simplify cases modification.
+- Add lightweight disorder.
+- Add hard disorder.
+- Move to 2D scattering.
+
+Less urgent TODO:
+- Add plotting out of the box.
