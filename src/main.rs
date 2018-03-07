@@ -15,7 +15,7 @@ use su_matrix::su_matrix::matrix_power;
 
 type ComplexMatrix2x2f = Matrix<Complex<f64>, U2, U2, MatrixArray<Complex<f64>, U2, U2>>;
 
-fn calculate_resistance_fixed_a(length: f64, m: f64, a: f64, plank_const: f64, energy: f64, potential: f64, n: u64) ->f64 {
+fn calculate_resistance(length: f64, m: f64, a: f64, plank_const: f64, energy: f64, potential: f64, n: u64) ->f64 {
     // 2mE
     let two_m_e = 2.0 * m * energy;
     // ((2mE)^1/2)/h
@@ -62,6 +62,7 @@ fn calculate_resistance_fixed_a(length: f64, m: f64, a: f64, plank_const: f64, e
     ro
 }
 
+/// Calculate resistance from A.
 fn calculate_resistance_from_a() {
     let n = 1000.0;
     let mut a_null = 0.0;
@@ -79,12 +80,13 @@ fn calculate_resistance_from_a() {
         if a_null >= a_final {
             done = true;
         }
-        let ro = calculate_resistance_fixed_a(length, m, a_null, plank_const, energy, potential, n_int);
+        let ro = calculate_resistance(length, m, a_null, plank_const, energy, potential, n_int);
         println!("{}  {}", a_null, ro);
     }
     // println!("Length {} meters", a_null);
 }
 
+/// Calculate resistance from Energy of flying electron.
 fn calculate_resistance_from_energy() {
     // println!("a:ro");
     let n = 1000.0;
@@ -103,12 +105,13 @@ fn calculate_resistance_from_energy() {
         if e_null >= e_final {
             done = true;
         }
-        let ro = calculate_resistance_fixed_a(length, m, a, plank_const, e_null, potential, n_int);
+        let ro = calculate_resistance(length, m, a, plank_const, e_null, potential, n_int);
         println!("{}  {}", e_null, ro);
     }
     // println!("Length {} meters", a_null);
 }
 
+// Calculate resistance from potential.
 fn calculate_resistance_from_potential() {
     // println!("a:ro");
     let n = 1000.0;
@@ -127,13 +130,13 @@ fn calculate_resistance_from_potential() {
         if p_null >= p_final {
             done = true;
         }
-        let ro = calculate_resistance_fixed_a(length, m, a, plank_const, energy, p_null, n_int);
+        let ro = calculate_resistance(length, m, a, plank_const, energy, p_null, n_int);
         println!("{}  {}", p_null, ro);
     }
     // println!("Length {} meters", a_null);
 }
 
 fn main() {
-    calculate_resistance_from_a();
+    // calculate_resistance_from_a();
     // calculate_resistance_from_potential();
 }
